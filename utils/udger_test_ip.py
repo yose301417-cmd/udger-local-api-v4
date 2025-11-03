@@ -16,7 +16,7 @@ while True:
     for i in range(0, l):
         q = queries[random.randint(0, l-1)]
         try:
-            with urllib.request.urlopen("http://127.0.0.1:8080/udger-local-api/parse/ip/" + q) as response:
+            with urllib.request.urlopen("http://127.0.0.1:8080/udger-local-api-v4/parse/ip/" + q) as response:
                 content = response.read()
                 cnt = cnt + 1
                 sys.stdout.write('\r')

@@ -16,16 +16,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.GZIPInputStream;
 
-import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
-
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import org.apache.cxf.jaxrs.ext.multipart.Multipart;
 import org.udger.restapi.service.DbFileManager;
 import org.udger.restapi.service.PoolManager;
@@ -58,7 +52,7 @@ public class SetResource {
             dbFileManager.setClientKey(accessKey);
             return Response.ok("OK").build();
         }
-        return Response.status(Status.BAD_REQUEST).build();
+        return Response.status(Response.Status.BAD_REQUEST).build();
     }
 
     /**
@@ -76,10 +70,10 @@ public class SetResource {
             return Response.ok("OK").build();
         } catch (UdgerException e) {
             LOG.log(Level.WARNING, "updateData(): failed." + e.getMessage());
-            return Response.status(Status.BAD_REQUEST).entity(e.getMessage()).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
         } catch (Exception e) {
             LOG.log(Level.SEVERE, "updateData(): failed.", e);
-            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
     }
 
@@ -96,7 +90,7 @@ public class SetResource {
         if (poolManager.scheduleUpdateDb(time)) {
             return Response.ok("OK").build();
         }
-        return Response.status(Status.BAD_REQUEST).build();
+        return Response.status(Response.Status.BAD_REQUEST).build();
     }
 
     /**
@@ -122,10 +116,10 @@ public class SetResource {
             return Response.ok("OK").build();
         } catch (UdgerException e) {
             LOG.log(Level.WARNING, "uploadDbFile(): failed." + e.getMessage());
-            return Response.status(Status.BAD_REQUEST).entity(e.getMessage()).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
         } catch (Exception e) {
             LOG.log(Level.SEVERE, "uploadDbFile(): failed.", e);
-            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
     }
 

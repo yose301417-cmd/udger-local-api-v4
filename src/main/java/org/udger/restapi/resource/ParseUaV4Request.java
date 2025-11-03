@@ -1,12 +1,15 @@
 package org.udger.restapi.resource;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 /**
  * The type Parse ua v 4 request.
  */
 @XmlRootElement(name = "parseUaV4Request")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ParseUaV4Request {
     @XmlElement
     String uaString;

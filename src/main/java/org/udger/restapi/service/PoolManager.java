@@ -8,13 +8,14 @@
 */
 package org.udger.restapi.service;
 
-import javax.ejb.Startup;
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.Initialized;
-import javax.enterprise.event.Observes;
-import javax.inject.Inject;
+
+import jakarta.ejb.Startup;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.Initialized;
+import jakarta.enterprise.event.Observes;
+import jakarta.inject.Inject;
+
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -50,7 +51,6 @@ public class PoolManager {
      * Download DB file and restart pool
      *
      * @return true, if successful
-     * @throws MalformedURLException the malformed URL exception
      * @throws IOException Signals that an I/O exception has occurred.
      * @throws UdgerException the udger exception
      * @throws ClassNotFoundException

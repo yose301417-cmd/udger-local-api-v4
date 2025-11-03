@@ -8,8 +8,9 @@
 */
 package org.udger.restapi.service;
 
-import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * The Class ParserStatistics.

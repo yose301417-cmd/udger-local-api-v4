@@ -7,7 +7,7 @@ import json
 from time import sleep
 
 try:
-    with urllib.request.urlopen("http://127.0.0.1:8080/udger-local-api/statistic") as response:
+    with urllib.request.urlopen("http://127.0.0.1:8080/udger-local-api-v4/statistic") as response:
         js = json.loads(response.read())
         print("UA count :" + str(js['total_requests_ua']))
         print("UA secs  :" + str(js['total_nanos_ua']/1000000000))

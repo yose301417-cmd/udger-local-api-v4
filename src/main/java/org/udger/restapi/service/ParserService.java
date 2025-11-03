@@ -12,8 +12,8 @@ import java.io.Serializable;
 import java.net.UnknownHostException;
 import java.sql.SQLException;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import org.udger.parser.UdgerIpResult;
 import org.udger.parser.UdgerParser;
