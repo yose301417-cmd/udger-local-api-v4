@@ -11,8 +11,8 @@ Udger-local-api-v4 is an application that runs a scalable pool of Udger parsers.
 The project consists of the following components:
 
 * [REST API description](https://github.com/udger/udger-local-api-v4/blob/master/openapi.yaml) in [OpenAPI](https://swagger.io) format.
-* Java 8 Maven project.
-* [Dockerfile](https://github.com/udger/udger-local-api-v4/blob/master/Dockerfile) based on [AlpineLinux + Java 21](https://hub.docker.com/_/eclipse-temurin) with the [Meecrowave](http://openwebbeans.apache.org/meecrowave/index.html) microprofile.
+* Java 17 Maven project, running on Java 25 in Docker.
+* [Dockerfile](https://github.com/udger/udger-local-api-v4/blob/master/Dockerfile) based on [AlpineLinux + Java 25](https://hub.docker.com/_/eclipse-temurin) with the [Meecrowave](http://openwebbeans.apache.org/meecrowave/index.html) microprofile.
 * Simple [build & run](https://github.com/udger/udger-local-api-v4/blob/master/buildAndRun.sh) script. Builds the project, builds the Docker image, and runs the Docker container.
 * [Testing scripts](https://github.com/udger/udger-local-api-v4/tree/master/utils) in Python.
 * [Hosted Docker image](https://hub.docker.com/r/udgercom/udger-local-api-v4/) on [Docker Hub](https://hub.docker.com/).

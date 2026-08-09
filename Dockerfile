@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jre-alpine AS common
+FROM eclipse-temurin:25-jre-alpine AS common
 LABEL maintainer="udger.com" description="Udger local parser"
 ENV MEECROWAVE_ARCHIVE meecrowave-core-2.0.0-runner
 ENV INSTALL_DIR /opt
